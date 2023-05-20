@@ -1,0 +1,14 @@
+MongoDB aggregation
+aggregation
+ -aggregate(collect)
+ -Multistage
+    - stage-1 (total  todo completion count/ get all user Below 18)
+    - stage -2 (only get male user)
+    - stage-3 (count the male user under 18)
+   
+
+Database Trasaction 
+Generating doc
+indexing/resarch (Read operation)
+  -redis(database) - memory database 
+  -indexing
