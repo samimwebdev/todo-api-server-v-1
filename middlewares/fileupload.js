@@ -1,7 +1,14 @@
 const multer = require('multer')
 const path = require('path')
+const fs = require('fs')
+
 const storage = multer.diskStorage({
-  destination: (req, file, cb) => {
+  destination: async (req, file, cb) => {
+    const folderPath = path.join(__dirname, '..', 'images')
+    //create images folder
+    if (!fs.existsSync(folderPath)) {
+      await fs.promises.mkdir(folderPath)
+    }
     cb(null, 'images')
   },
   filename: (req, file, cb) => {
